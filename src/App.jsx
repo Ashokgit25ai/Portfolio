@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Child from './components/Child'
+import Parent from './components/Parent'
 import Pizza1 from './assets/Pizza1.jpg'
 import pizza2 from './assets/pizza2.webp'
 import pizza3 from './assets/pizza3.webp'
+
 const App = () => {
 
   const title1 = "Cheese Pizza"
@@ -11,6 +13,10 @@ const App = () => {
   const price2 = "300/-"
   const title3 = "Chicken Pizza"
   const price3 = "400/-"
+
+  const [count,setCount] = useState(0);
+
+
   return (
     <div className="container" >
       <div className="card1">
@@ -21,6 +27,9 @@ const App = () => {
       </div>
       <div className="card1">
         <Child image = {pizza3} name = {title3} rupees = {price3} className = "pizza3"  />
+      </div>
+      <div>
+        <Parent count={count} counter={setCount} />
       </div>
         
     </div>
