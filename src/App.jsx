@@ -5,6 +5,7 @@ import Pizza1 from './assets/Pizza1.jpg'
 import pizza2 from './assets/pizza2.webp'
 import pizza3 from './assets/pizza3.webp'
 import ToggleMessage from './components/ToggleMessage'
+import ToggleInput from './components/ToggleInput'
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
 
   // const [count,setCount] = useState(0);
   const [show,setShow] = useState(false);
+  const [showPass,setPass] = useState(false);
   
 
 
@@ -36,7 +38,10 @@ const App = () => {
     //   </div>
       
     // </div>
-    <ToggleMessage show = {show} set={setShow} />
+    <>
+      <ToggleMessage show = {show} set={setShow} />
+      <ToggleInput showPass = {showPass} setPass={setPass} />
+    </>
     
   )
 }
